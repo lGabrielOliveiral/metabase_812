@@ -30,6 +30,17 @@ services:
       MB_DB_USER: ${MB_DB_USER}
       MB_DB_PASS: ${MB_DB_PASS}
       JAVA_TOOL_OPTIONS: "-Xms512m -Xmx1024m"
+        # --- AUTO SETUP ---
+      MB_SETUP_TOKEN: "setup123"           # qualquer string serve
+      MB_EMAIL_SMTP_HOST: ""                # evita que ele peça SMTP
+      MB_EMAIL_SMTP_PORT: ""
+      MB_EMAIL_FROM_ADDRESS: ""
+      MB_ANON_TRACKING_ENABLED: false
+      MB_ENABLE_PUBLIC_SHARING: false
+      MB_SETUP_ADMIN_EMAIL: "admin@example.com"
+      MB_SETUP_ADMIN_PASSWORD: "admin123"
+      MB_SETUP_ADMIN_FIRST_NAME: "Admin"
+      MB_SETUP_ADMIN_LAST_NAME: "User"
 
 volumes:
   metabase-db-data:
